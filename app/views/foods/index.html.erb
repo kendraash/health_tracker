@@ -34,7 +34,7 @@
   </tbody>
 </table>
 
-<h4>You ate <%= pluralize(Food.count, "food") %> so far today.</h4>
+<h4>You ate <%= pluralize(Food.count, "food") %> totalling <%= pluralize(Food.all.sum(:calories), "calories") %> so far today.</h4>
 </div>
 
 <div class="col-md-6">
@@ -62,6 +62,10 @@
       <% end %>
     </tbody>
   </table>
-  <h4>You did <%= pluralize(Exercise.count, "activity") %> today!</h4>
+  <h4>Doing these <%= pluralize(Exercise.count, "activity") %>, you burned <%= pluralize(Exercise.all.sum(:calories_burned), "calories") %> today!</h4>
   </div>
 </div>
+<center>
+  <h3>Good Job!</h3>
+<%= column_chart Exercise.group(:name).sum(:calories_burned), colors: ["green"] %>
+</center>
