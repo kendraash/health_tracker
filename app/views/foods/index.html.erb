@@ -25,14 +25,16 @@
   <tbody>
     <% @foods.each do |food| %>
       <tr>
-        <td><%= food.name %></td>
+        <td><%= food.name.titleize %></td>
         <td><%= food.calories %></td>
         <td><%= link_to 'Edit', edit_food_path(food), id:"edit_food_link", remote: true %></td>
-        <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<h4>You ate <%= pluralize(Food.count, "food") %> so far today.</h4>
 </div>
 
 <div class="col-md-6">
@@ -52,13 +54,14 @@
     <tbody>
       <% @exercises.each do |exercise| %>
         <tr>
-          <td><%= exercise.name %></td>
+          <td><%= exercise.name.titleize %></td>
           <td><%= exercise.calories_burned %></td>
           <td><%= link_to 'Edit', edit_exercise_path(exercise), id:"edit_exercise_link", remote: true %></td>
-          <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <h4>You did <%= pluralize(Exercise.count, "activity") %> today!</h4>
   </div>
 </div>
