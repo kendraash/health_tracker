@@ -24,7 +24,7 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
 
     if @exercise.save
-      redirect_to @exercise, notice: 'Exercise was successfully created.'
+      redirect_to root_path, notice: 'Exercise was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class ExercisesController < ApplicationController
   # PATCH/PUT /exercises/1
   def update
     if @exercise.update(exercise_params)
-      redirect_to @exercise, notice: 'Exercise was successfully updated.'
+      redirect_to root_path, notice: 'Exercise was successfully updated.'
     else
       render :edit
     end
@@ -42,7 +42,8 @@ class ExercisesController < ApplicationController
   # DELETE /exercises/1
   def destroy
     @exercise.destroy
-    redirect_to exercises_url, notice: 'Exercise was successfully destroyed.'
+    flash[:notice] = 'Exercise was successfully destroyed.'
+    redirect_to root_path
   end
 
   private

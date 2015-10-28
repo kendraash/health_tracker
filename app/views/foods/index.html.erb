@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <div class="row">
   <div class="col-md-6">
@@ -19,7 +19,7 @@
         <td><%= food.name %></td>
         <td><%= food.calories %></td>
         <td><%= link_to 'Show', food %></td>
-        <td><%= link_to 'Edit', edit_food_path(food) %></td>
+        <td><%= link_to 'Edit', edit_food_path(food), id:"edit_food_link", remote: true %></td>
         <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -29,7 +29,7 @@
 
 <br>
 
-<%= link_to 'New Food', new_food_path %>
+<%= link_to 'New Food', new_food_path, id: "new_food_link", remote: true %>
 </div>
 
 
@@ -52,7 +52,7 @@
           <td><%= exercise.name %></td>
           <td><%= exercise.calories_burned %></td>
           <td><%= link_to 'Show', exercise %></td>
-          <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+          <td><%= link_to 'Edit', edit_exercise_path(exercise), id:"edit_exercise_link", remote: true %></td>
           <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
@@ -60,6 +60,6 @@
   </table>
 
   <br>
-  <%= link_to 'New Exercise', new_exercise_path %>
+  <%= link_to 'New Exercise', new_exercise_path, id:"new_exercise_link", remote: true %>
   </div>
 </div>
