@@ -3,12 +3,9 @@ class FoodsController < ApplicationController
 
   # GET /foods
   def index
-    @foods = Food.all
-    @exercises = Exercise.all
-  end
 
-  # GET /foods/1
-  def show
+    @foods = Food.search(params[:search])
+    @exercises = Exercise.search(params[:search])
   end
 
   # GET /foods/new

@@ -6,10 +6,6 @@ class ExercisesController < ApplicationController
     @exercises = Exercise.all
   end
 
-  # GET /exercises/1
-  def show
-  end
-
   # GET /exercises/new
   def new
     @exercise = Exercise.new

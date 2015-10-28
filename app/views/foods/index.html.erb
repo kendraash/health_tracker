@@ -1,10 +1,19 @@
 
+<div id="row">
+  <%= form_tag foods_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %>
+</div>
 
 <div class="row">
   <div class="col-md-6">
 <h1>Food</h1>
-
-<table>
+<%= link_to 'New Food', new_food_path, id: "new_food_link", remote: true, class: "btn btn-sm btn-info" %>
+<br>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,29 +27,23 @@
       <tr>
         <td><%= food.name %></td>
         <td><%= food.calories %></td>
-        <td><%= link_to 'Show', food %></td>
         <td><%= link_to 'Edit', edit_food_path(food), id:"edit_food_link", remote: true %></td>
         <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-
-<br>
-
-<%= link_to 'New Food', new_food_path, id: "new_food_link", remote: true %>
 </div>
-
 
 <div class="col-md-6">
   <h1>Exercise</h1>
-
-  <table>
+  <%= link_to 'New Exercise', new_exercise_path, id:"new_exercise_link", remote: true, class: "btn btn-sm btn-info"  %>
+  <br>
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>Name</th>
-        <th>Calories burned</th>
+        <th>Calories Burned</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -51,15 +54,11 @@
         <tr>
           <td><%= exercise.name %></td>
           <td><%= exercise.calories_burned %></td>
-          <td><%= link_to 'Show', exercise %></td>
           <td><%= link_to 'Edit', edit_exercise_path(exercise), id:"edit_exercise_link", remote: true %></td>
           <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-  <br>
-  <%= link_to 'New Exercise', new_exercise_path, id:"new_exercise_link", remote: true %>
   </div>
 </div>
