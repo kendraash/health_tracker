@@ -4,6 +4,7 @@ class FoodsController < ApplicationController
   # GET /foods
   def index
     @foods = Food.all
+    @exercises = Exercise.all
   end
 
   # GET /foods/1
