@@ -8,6 +8,13 @@
 </head>
 <body>
 <div class="container">
+  <nav class="navbar">
+    <h1>Health Tracker</h1>
+    <%= link_to "Home", root_path %>
+
+    <%= yield(:nav) %>
+  </nav>
+  <hr>
   <%= yield %>
 </div>
 </body>
