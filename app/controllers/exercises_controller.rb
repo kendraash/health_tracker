@@ -13,6 +13,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/1/edit
   def edit
+    @exercise = Exercise.find(params[:id])
   end
 
   # POST /exercises

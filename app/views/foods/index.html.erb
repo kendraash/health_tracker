@@ -27,7 +27,7 @@
       <tr>
         <td><%= food.name.titleize %></td>
         <td><%= food.calories %></td>
-        <td><%= link_to 'Edit', edit_food_path(food), id:"edit_food_link", remote: true %></td>
+        <td><%= link_to 'Edit', edit_food_path(food), id:"edit_food_link_#{food.id}", remote: true %></td>
         <td><%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -56,7 +56,7 @@
         <tr>
           <td><%= exercise.name.titleize %></td>
           <td><%= exercise.calories_burned %></td>
-          <td><%= link_to 'Edit', edit_exercise_path(exercise), id:"edit_exercise_link", remote: true %></td>
+          <td><%= link_to 'Edit', edit_exercise_path(exercise), id:"edit_exercise_link_#{exercise.id}", remote: true %></td>
           <td><%= link_to 'Delete', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>

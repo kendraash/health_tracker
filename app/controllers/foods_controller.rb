@@ -15,6 +15,7 @@ class FoodsController < ApplicationController
 
   # GET /foods/1/edit
   def edit
+    @food = Food.find(params[:id])
   end
 
   # POST /foods
