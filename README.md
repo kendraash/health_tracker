@@ -28,12 +28,10 @@ _View App:_ https://github.com/kendraash/health_tracker.git
 * _Chartkick_
 
 
-
-
 ## Database Setup/ Installation
 
 _In rake:_<br>
-_db:migrate_<br>
+_db:setup, (The data will be loaded with with db:setup.)_<br>
 _all database tables listed in schema.rb_
 <br>
 

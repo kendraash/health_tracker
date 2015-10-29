@@ -62,10 +62,10 @@
       <% end %>
     </tbody>
   </table>
-  <h4>Doing these <%= pluralize(Exercise.count, "activity") %>, you burned <%= pluralize(Exercise.all.sum(:calories_burned), "calories") %> today!</h4>
+  <h4>Doing these <%= pluralize(@exercises.count, "activity") %>, you burned <%= pluralize(@exercises.all.sum(:calories_burned), "calories") %> today!</h4>
   </div>
 </div>
 <center>
-  <h3>Good Job!</h3>
-<%= column_chart Exercise.group(:name).sum(:calories_burned), colors: ["green"] %>
+  <h3>Good Job Burning Those Calories!</h3>
+<%= column_chart @exercises.group(:name).sum(:calories_burned), colors: ["green"] %>
 </center>

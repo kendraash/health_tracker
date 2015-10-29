@@ -1,11 +1,11 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update, :destroy]
+  include ApplicationHelper
 
   # GET /foods
   def index
-
-    @foods = Food.search(params[:search])
-    @exercises = Exercise.search(params[:search])
+    @foods = todays_events(Food.search(params[:search]))
+    @exercises = todays_events(Exercise.search(params[:search]))
   end
 
   # GET /foods/new
