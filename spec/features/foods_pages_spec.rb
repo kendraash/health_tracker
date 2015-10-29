@@ -12,4 +12,12 @@ describe "add a food process" do
 end
 
 describe "editing a food process" do
+  it "allows a user to edit a food's information with AJAX functionality", js: true do
+    test_food = Food.create(:name => "Chocolate Lava Cake", :calories => "500")
+    visit root_path
+    find("#edit_food_link_#{test_food.id}").click
+    fill_in "Name", :with => "Chocolate Souffle"
+    click_on "Update Food"
+    expect(page).to have_content("Chocolate Souffle")
+  end
 end
