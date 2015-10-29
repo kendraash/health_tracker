@@ -3,7 +3,7 @@
   <%= form_tag foods_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search", class: "btn btn-sm btn-default", :name => nil %>
   </p>
   <% end %>
 </div>
@@ -70,5 +70,5 @@
 </div>
 <center>
   <h3>Good Job Burning These Calories Today!</h3>
-<%= column_chart @exercises.group(:name).sum(:calories_burned), colors: ["green"] %>
+<%= column_chart @exercises.group(:name).sum(:calories_burned), colors: ["#3B90AD"] %>
 </center>
