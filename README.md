@@ -7,9 +7,11 @@
 ## Description
 
 _Users:_
-* _Please sign up and log in to track your food and exercises._
-* _For food user can enter the name and calories._
-* _For exercise user can enter name for the exercise and the calories burned._
+* _Can track their food and exercises._
+* _For food, user can enter the name and calories._
+* _For exercise, user can enter name for the exercise and the calories burned._
+* _The home page will show the health tracker activities for the current day and the history page will show all health tracker activities inputed by user (for all days)._
+
 
 _View App:_ https://github.com/kendraash/health_tracker.git
 
@@ -31,7 +33,7 @@ _View App:_ https://github.com/kendraash/health_tracker.git
 ## Database Setup/ Installation
 
 _In rake:_<br>
-_db:setup, (The data will be loaded with with db:setup.)_<br>
+_db:setup, (The seeded data will be loaded with db:setup.)_<br>
 _all database tables listed in schema.rb_
 <br>
 

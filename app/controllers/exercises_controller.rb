@@ -3,7 +3,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises
   def index
-    @exercises = Exercise.where(:all, :conditions => ["DATE(created_at) = ?", Date.today]
+    @exercises = Exercise.all
 
   end
 

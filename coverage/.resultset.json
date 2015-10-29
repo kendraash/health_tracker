@@ -238,6 +238,7 @@
         null,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -296,6 +297,11 @@
       ],
       "/Users/Guest/Desktop/Health-Tracker/app/helpers/application_helper.rb": [
         1,
+        null,
+        1,
+        16,
+        null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/Health-Tracker/app/helpers/exercises_helper.rb": [
@@ -304,6 +310,7 @@
       ],
       "/Users/Guest/Desktop/Health-Tracker/app/helpers/foods_helper.rb": [
         1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/Health-Tracker/spec/features/foods_pages_spec.rb": [
@@ -379,12 +386,13 @@
       "/Users/Guest/Desktop/Health-Tracker/app/controllers/foods_controller.rb": [
         1,
         1,
+        1,
         null,
         null,
         1,
+        8,
+        8,
         null,
-        8,
-        8,
         null,
         null,
         null,
@@ -451,6 +459,7 @@
         null,
         null,
         null,
+        null,
         1,
         1,
         null,
@@ -500,6 +509,6 @@
         null
       ]
     },
-    "timestamp": 1446141117
+    "timestamp": 1446158033
   }
 }

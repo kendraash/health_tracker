@@ -1,0 +1,53 @@
+<center>
+  <h1> Health Tracker History </h1>
+</center>
+<div class="row">
+  <div class="col-md-6">
+    <h1> Food </h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Calories</th>
+          <th>Date</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.name.titleize %></td>
+          <td><%= food.calories %></td>
+          <td><%= food.created_at.strftime('%v') %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-6">
+    <h1>Exercise</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Calories Burned</th>
+          <th>Date</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <% @exercises.each do |exercise| %>
+        <tr>
+          <td><%= exercise.name.titleize %></td>
+          <td><%= exercise.calories_burned %></td>
+          <td><%= exercise.created_at.strftime('%v') %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

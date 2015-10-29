@@ -6,6 +6,7 @@ class FoodsController < ApplicationController
   def index
     @foods = todays_events(Food.search(params[:search]))
     @exercises = todays_events(Exercise.search(params[:search]))
+    
   end
 
   # GET /foods/new
