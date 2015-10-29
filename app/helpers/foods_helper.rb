@@ -1,3 +1,0 @@
-module FoodsHelper
-
-end

@@ -1,6 +1,6 @@
 class HistoriesController < ApplicationController
   def index
-    @exercises = Exercise.all
-    @foods = Food.all
+    @foods = Food.search(params[:search])
+    @exercises = Exercise.search(params[:search])
   end
 end

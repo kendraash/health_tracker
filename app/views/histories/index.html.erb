@@ -1,3 +1,11 @@
+<div id="row">
+  <%= form_tag histories_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %>
+</div>
 <center>
   <h1> Health Tracker History </h1>
 </center>
